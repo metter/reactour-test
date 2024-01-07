@@ -36,3 +36,44 @@
     transform: rotate(360deg);
   }
 }
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* High z-index to ensure it's on top of other content */
+}
+
+.modal-content {
+  width: 400px;
+  height: 400px;
+  background-color: yellow;
+  border: 2px solid black;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1001; /* Ensures content is above the backdrop */
+}
+
+.modal-close {
+  margin-bottom: 15px; /* Adjust as needed */
+  cursor: pointer;
+}
+
+.modal-body {
+  text-align: center;
+}
+
+.modal-button {
+  margin-top: 15px; /* Adjust as needed */
+  cursor: pointer;
+}
